@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ArnavCodes</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, sans-serif;
+    }
+
+    body{
+        background:#0b1220;
+        color:white;
+    }
+
+    nav{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:20px 10%;
+        background:#0f172a;
+        position:sticky;
+        top:0;
+        border-bottom:1px solid #1f2937;
+    }
+
+    .logo{
+        font-size:1.6rem;
+        font-weight:bold;
+        color:#38bdf8;
+    }
+
+    nav a{
+        color:white;
+        text-decoration:none;
+        margin-left:15px;
+    }
+
+    .hero{
+        text-align:center;
+        padding:100px 20px;
+    }
+
+    .hero h1{
+        font-size:3.5rem;
+        margin-bottom:10px;
+    }
+
+    .hero p{
+        max-width:700px;
+        margin:0 auto;
+        color:#cbd5e1;
+        font-size:1.2rem;
+    }
+
+    .badge{
+        display:inline-block;
+        margin-top:10px;
+        padding:6px 12px;
+        background:#16a34a;
+        color:white;
+        border-radius:999px;
+        font-size:0.9rem;
+        font-weight:bold;
+    }
+
+    .btn{
+        display:inline-block;
+        margin-top:25px;
+        padding:12px 24px;
+        background:#38bdf8;
+        color:black;
+        font-weight:bold;
+        border-radius:8px;
+        text-decoration:none;
+    }
+
+    .section{
+        padding:70px 10%;
+    }
+
+    .section h2{
+        font-size:2rem;
+        margin-bottom:20px;
+        color:#38bdf8;
+    }
+
+    .card{
+        background:#111827;
+        padding:20px;
+        border-radius:10px;
+        margin-top:15px;
+        border:1px solid #1f2937;
+    }
+
+    .grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        gap:20px;
+    }
+
+    footer{
+        text-align:center;
+        padding:30px;
+        color:#94a3b8;
+        border-top:1px solid #1f2937;
+        margin-top:50px;
+    }
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">ArnavCodes</div>
+    <div>
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#hackathons">Hackathons</a>
+        <a href="projects.html">Projects</a>
+        <a href="code.html">Code</a>
+        <a href="#join">Join</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>ArnavCodes</h1>
+
+    <div class="badge">FREE STUDENT CODING CLUB</div>
+
+    <p>
+        Learn. Create. Launch.  
+        A free online coding club where students learn Python & C, then build real projects and compete in monthly hackathons.
+    </p>
+
+    <a class="btn" href="#join">Join Free</a>
+</section>
+
+<section class="section" id="about">
+    <h2>About</h2>
+    <div class="card">
+        ArnavCodes is a free student-led coding club focused on teaching programming, building projects, and hosting hackathons for students worldwide.
+    </div>
+</section>
+
+<section class="section" id="programs">
+    <h2>Programs</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Foundations</h3>
+            <p>Learn Python and C, build logic, and understand core programming concepts.</p>
+        </div>
+
+        <div class="card">
+            <h3>Weekly Workshops</h3>
+            <p>Free online coding sessions every week.</p>
+        </div>
+
+        <div class="card">
+            <h3>Project Building</h3>
+            <p>Build real-world projects and prepare for hackathons.</p>
+        </div>
+    </div>
+</section>
+
+<!-- HACKATHONS SECTION -->
+<section class="section" id="hackathons">
+    <h2>Hackathons</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Upcoming Hackathons</h3>
+            <p>View all upcoming events, themes, and registration details.</p>
+            <a class="btn" href="hackathons.html">View Hackathons</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="join">
+    <h2>Join ArnavCodes</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Students</h3>
+            <p>Join free workshops and hackathons.</p>
+            <a class="btn" href="https://docs.google.com/forms/d/1kcpy3ydGOQAeqAXgJBAor6uqz93m3vBxGy3zaT1lVe0">Join as Student</a>
+        </div>
+
+        <div class="card">
+            <h3>Teachers / Managers</h3>
+            <p>Help run workshops and hackathons.</p>
+            <a class="btn" href="https://docs.google.com/forms/d/1sZIUE20kAXj9m-uUwFq3DeBQ1lc-mYV_HE4kWWz88Ss">Join as Staff</a>
+        </div>
+            <div class="card">
+        <h3>Contact</h3>
+        <p>Have questions or want to join ArnavCodes?</p>
+        <p>Email us at:</p>
+        <a href="mailto:arnavcodes@gmail.com" style="color:#38bdf8; font-weight:bold;">
+            arnavcodes@gmail.com
+        </a>
+    </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 ArnavCodes • Free Student Coding Club • Learn. Create. Launch.
+</footer>
+
+</body>
+</html>
