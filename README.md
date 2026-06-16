@@ -64,7 +64,7 @@ Visit our website to join:
 
 ## Contact
 
-[arnavcodes@gmail.com](mailto:arnavcodes@gmail.com)
+[arnavcodes.club@gmail.com](mailto:arnavcodes.club@gmail.com)
 
 ## Mission
 
