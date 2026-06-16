@@ -257,30 +257,37 @@ function checkAnswer(selected, correct) {
     document.getElementById("feedback").innerText = "Wrong 👀";
     document.getElementById("feedback").style.color = "tomato";
     setTimeout(loadQuestion, 700);
+    loadQuestion();
   }
 }
 
 function giveUp() {
   document.getElementById("app").innerHTML = `
     <h1>It's okay 👍</h1>
-    <p>You got close to completing ArnavCodes.</p>
-    <p>If you would like to learn how to get better at making software using AI, sign up here.</p>
-  `;
+    <p>You got close to completing ArnavCodes challenge.</p>
+    <p>If you would like to learn how to get better at making software using AI, follow the link below.</p>
+    <a href="https://tossout1.github.io/ArnavCodes/#join">Go to signup.</a>
+    `;
+    
 }
 
 function failScreen() {
   document.getElementById("app").innerHTML = `
     <h1>Sorry</h1>
     <p>You missed too many questions but you got close.</p>
-    <p>If you would like to learn how to get better at making software using AI, c.</p>
+    <p>If you would like to learn how to get better at making software using AI follow the link below.</p>
+    <a href="https://tossout1.github.io/ArnavCodes/#join">Go to signup.</a>
   `;
+  
 }
 
 function winScreen() {
   document.getElementById("app").innerHTML = `
     <h1>Wow you're good at this 🚀</h1>
-    <p>If you would like to, you can join my club on CS specifically developing with AI to develop better than AI itself.</p>
+    <p>If you would like to, you can join my club on CS specifically developing with AI to develop better than AI itself. To join follow the link below.</p>
+    <a href="https://tossout1.github.io/ArnavCodes/#join">Go to signup.</a>
   `;
+  
 }
 
 // start
