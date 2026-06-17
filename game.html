@@ -8,13 +8,205 @@
 <body>
 <div class="container" id="app"><h1>ArnavCodes</h1><div class="topbar"><div id="status"></div><div>Max mistakes: 2</div></div><div class="question" id="question"></div><div class="options" id="options"></div><div class="feedback" id="feedback"></div><button class="giveup" onclick="giveUp()">Give Up</button></div>
 <script>
-let mistakes=0,current=0;let questions=[{q:"What is 2 + 2?",options:["3","4","5","6"],answer:1},{q:"What does console.log() do in JavaScript?",options:["Deletes data","Prints output to the console","Creates loops","Stops program"],answer:1},{q:"Which keyword declares a variable in JS?",options:["let","banana","loop","print"],answer:0},{q:"Which data structure is best for undo functionality?",options:["Queue","Stack","Tree","Graph"],answer:1},{q:"Binary search works only when data is:",options:["Random","Sorted","Encrypted","Compressed"],answer:1},{q:"What is a loop used for?",options:["Repeating actions","Deleting files","Encrypting data","Stopping programs"],answer:0},{q:"Why is caching used in websites?",options:["To slow down pages","To store data for faster access","To delete memory","To increase errors"],answer:1},{q:"What does HTTP mainly do?",options:["Controls hardware","Transfers web data","Runs games","Encrypts files"],answer:1},{q:"What happens when a server gets overloaded?",options:["It becomes faster","Requests queue and delays increase","It deletes requests","It stops all users instantly"],answer:1},{q:"What causes stack overflow?",options:["Infinite recursion","Too many files","Too many buttons","Too much storage"],answer:0},{q:"Which system is best for real-time messaging order?",options:["Stack","Queue","Tree","Set"],answer:1}];
-function shuffle(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]]}}
-function shuffleQuestion(q){let options=q.options.map((opt,i)=>({opt,i}));shuffle(options);let newOptions=options.map(o=>o.opt);let newAnswer=options.findIndex(o=>o.i===q.answer);return{q:q.q,options:newOptions,answer:newAnswer}}
-function loadQuestion(){if(mistakes>=2)return failScreen();if(current>=questions.length)return winScreen();let q=shuffleQuestion(questions[current]);document.getElementById('status').innerText=`Mistakes: ${mistakes}/2 | Question ${current+1}/${questions.length}`;document.getElementById('question').innerText=q.q;const optionsDiv=document.getElementById('options');optionsDiv.innerHTML='';document.getElementById('feedback').innerText='';q.options.forEach((opt,i)=>{const btn=document.createElement('button');btn.innerText=opt;btn.onclick=()=>checkAnswer(i,q.answer);optionsDiv.appendChild(btn);});}
-function checkAnswer(selected,correct){const feedback=document.getElementById('feedback');if(selected===correct){feedback.innerText='Correct 🔥';feedback.style.color='lightgreen';}else{mistakes++;const correctAnswerText=document.querySelectorAll('#options button')[correct].innerText;feedback.innerText=`Wrong 👀 Correct answer: ${correctAnswerText}`;feedback.style.color='tomato';}current++;setTimeout(()=>loadQuestion(),1500);}
-function giveUp(){document.getElementById('app').innerHTML=`<h1>It's okay 👍</h1><p>You got close to completing ArnavCodes challenge.</p><p>If you would like to learn how to get better at making software using AI, follow the link below.</p><a href='https://tossout1.github.io/ArnavCodes/#join'>Go to signup.</a>`}
-function failScreen(){document.getElementById('app').innerHTML=`<h1>Sorry</h1><p>You missed too many questions but you got close.</p><p>If you would like to learn how to get better at making software using AI follow the link below.</p><a href='https://tossout1.github.io/ArnavCodes/#join'>Go to signup.</a>`}
-function winScreen(){document.getElementById('app').innerHTML=`<h1>Wow you're good at this 🚀</h1><p>If you would like to, you can join my club on CS specifically developing with AI to develop better than AI itself. To join follow the link below.</p><a href='https://tossout1.github.io/ArnavCodes/#join'>Go to signup.</a>`}
-shuffle(questions);loadQuestion();
-</script></body></html>
+
+let mistakes = 0;
+let current = 0;
+
+let questions = [
+  // 🟢 EASY (confidence build)
+  {
+    q: "What is 2 + 2?",
+    options: ["3", "4", "5", "6"],
+    answer: 1
+  },
+  {
+    q: "What does console.log() do in JavaScript?",
+    options: [
+      "Deletes data",
+      "Prints output to the console",
+      "Creates loops",
+      "Stops program"
+    ],
+    answer: 1
+  },
+  {
+    q: "Which keyword declares a variable in JS?",
+    options: ["let", "banana", "loop", "print"],
+    answer: 0
+  },
+
+  // 🟡 MEDIUM
+  {
+    q: "Which data structure is best for undo functionality?",
+    options: ["Queue", "Stack", "Tree", "Graph"],
+    answer: 1
+  },
+  {
+    q: "Binary search works only when data is:",
+    options: ["Random", "Sorted", "Encrypted", "Compressed"],
+    answer: 1
+  },
+  {
+    q: "What is a loop used for?",
+    options: [
+      "Repeating actions",
+      "Deleting files",
+      "Encrypting data",
+      "Stopping programs"
+    ],
+    answer: 0
+  },
+
+  // 🟠 MEDIUM+
+  {
+    q: "Why is caching used in websites?",
+    options: [
+      "To slow down pages",
+      "To store data for faster access",
+      "To delete memory",
+      "To increase errors"
+    ],
+    answer: 1
+  },
+  {
+    q: "What does HTTP mainly do?",
+    options: [
+      "Controls hardware",
+      "Transfers web data",
+      "Runs games",
+      "Encrypts files"
+    ],
+    answer: 1
+  },
+
+  // 🔴 HARD (CS thinking)
+  {
+    q: "What happens when a server gets overloaded?",
+    options: [
+      "It becomes faster",
+      "Requests queue and delays increase",
+      "It deletes requests",
+      "It stops all users instantly"
+    ],
+    answer: 1
+  },
+  {
+    q: "What causes stack overflow?",
+    options: [
+      "Infinite recursion",
+      "Too many files",
+      "Too many buttons",
+      "Too much storage"
+    ],
+    answer: 0
+  },
+  {
+    q: "Which system is best for real-time messaging order?",
+    options: [
+      "Stack",
+      "Queue",
+      "Tree",
+      "Set"
+    ],
+    answer: 1
+  }
+];
+
+// shuffle helper
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+}
+
+// shuffle answers + track correct index
+function shuffleQuestion(q) {
+  let options = q.options.map((opt, i) => ({ opt, i }));
+  shuffle(options);
+
+  let newOptions = options.map(o => o.opt);
+  let newAnswer = options.findIndex(o => o.i === q.answer);
+
+  return {
+    q: q.q,
+    options: newOptions,
+    answer: newAnswer
+  };
+}
+
+function loadQuestion() {
+  if (mistakes >= 2) return failScreen();
+  if (current >= questions.length) return winScreen();
+
+  let q = shuffleQuestion(questions[current]);
+
+  document.getElementById("status").innerText =
+    'Mistakes: ${mistakes}/2 | Question ${current + 1}/${questions.length}';
+
+  document.getElementById("question").innerText = q.q;
+
+  const optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+  document.getElementById("feedback").innerText = "";
+
+  q.options.forEach((opt, i) => {
+    const btn = document.createElement("button");
+    btn.innerText = opt;
+    btn.onclick = () => checkAnswer(i, q.answer);
+    optionsDiv.appendChild(btn);
+  });
+}
+
+function checkAnswer(selected, correct) {
+  if (selected === correct) {
+    document.getElementById("feedback").innerText = "Correct 🔥";
+    document.getElementById("feedback").style.color = "lightgreen";
+    current++;
+    setTimeout(loadQuestion, 500);
+  } else {
+    mistakes++;
+    document.getElementById("feedback").innerText = "Wrong 👀";
+    document.getElementById("feedback").style.color = "tomato";
+    setTimeout(loadQuestion, 700);
+    current++;
+  }
+}
+
+function giveUp() {
+  document.getElementById("app").innerHTML = `
+    <h1>It's okay 👍</h1>
+    <p>You got close to completing ArnavCodes challenge.</p>
+    <p>If you would like to learn how to get better at making software using AI, follow the link below.</p>
+    <a href="https://tossout1.github.io/ArnavCodes/#join">Go to signup.</a>
+    `;
+    
+}
+
+function failScreen() {
+  document.getElementById("app").innerHTML = `
+    <h1>Sorry</h1>
+    <p>You missed too many questions but you got close.</p>
+    <p>If you would like to learn how to get better at making software using AI follow the link below.</p>
+    <a href="https://tossout1.github.io/ArnavCodes/#join">Go to signup.</a>
+  `;
+  
+}
+
+function winScreen() {
+  document.getElementById("app").innerHTML = `
+    <h1>Wow you're good at this 🚀</h1>
+    <p>If you would like to, you can join my club on CS specifically developing with AI to develop better than AI itself. To join follow the link below.</p>
+    <a href="https://tossout1.github.io/ArnavCodes/#join">Go to signup.</a>
+  `;
+  
+}
+
+// start
+shuffle(questions);
+loadQuestion();
+
+</script>
+
+</body>
+</html>
