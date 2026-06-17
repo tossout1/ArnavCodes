@@ -230,7 +230,7 @@ function loadQuestion() {
   let q = shuffleQuestion(questions[current]);
 
   document.getElementById("status").innerText =
-    `Mistakes: ${mistakes}/2 | Question ${current + 1}/10`;
+    'Mistakes: ${mistakes}/2 | Question ${current + 1}/${questions.length}';
 
   document.getElementById("question").innerText = q.q;
 
