@@ -5,6 +5,7 @@
     <html>
       <head>
         <title>ArnavCodes Sitemap</title>
+        <link rel="icon" href="/ArnavCodes/favicon.ico" type="image/x-icon" />
         <style>
           body { font-family: Arial, sans-serif; background: #f5f7fb; color: #1c1f26; margin: 0; padding: 24px; }
           .container { max-width: 900px; margin: 0 auto; }
@@ -27,16 +28,12 @@
             <thead>
               <tr>
                 <th>URL</th>
-                <th>Change Frequency</th>
-                <th>Priority</th>
               </tr>
             </thead>
             <tbody>
               <xsl:for-each select="s:urlset/s:url">
                 <tr>
                   <td><a href="{s:loc}"><xsl:value-of select="s:loc"/></a></td>
-                  <td><xsl:value-of select="s:changefreq"/></td>
-                  <td><xsl:value-of select="s:priority"/></td>
                 </tr>
               </xsl:for-each>
             </tbody>
