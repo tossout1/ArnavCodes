@@ -37,6 +37,33 @@
         .project-box { background: #eef6ff; border: 1px dashed #0056b3; padding: 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem; }
         .preview-btn { background: #0056b3; color: white; text-decoration: none; padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; float: right; margin-top: -5px; }
         .preview-btn:hover { background: #004085; }
+
+        @media (max-width: 760px) {
+            body {
+                margin: 20px auto;
+                padding: 0 16px;
+                max-width: 100%;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .meta-info {
+                font-size: 0.95rem;
+                margin-bottom: 24px;
+            }
+
+            .module-card {
+                padding: 18px;
+            }
+
+            .preview-btn {
+                float: none;
+                display: inline-block;
+                margin-top: 10px;
+            }
+        }
     </style>
 </head>
 <body>

@@ -14,11 +14,19 @@
     }
 
     nav{
-        padding:20px 10%;
+        padding:20px 5%;
         background:#0f172a;
         display:flex;
         justify-content:space-between;
+        align-items:center;
+        flex-wrap:wrap;
+        gap:10px;
         border-bottom:1px solid #1f2937;
+    }
+    nav h2{
+        margin:0;
+        flex:1 1 auto;
+        min-width:220px;
     }
 
     a{
@@ -28,7 +36,7 @@
     }
 
     .container{
-        padding:50px 10%;
+        padding:50px 5%;
     }
 
     .card{
@@ -63,6 +71,21 @@
         border-radius:999px;
         font-size:0.8rem;
         margin-top:8px;
+    }
+
+    @media (max-width: 760px) {
+        .container{
+            padding:30px 4%;
+        }
+
+        nav{
+            justify-content:center;
+            text-align:center;
+        }
+
+        .grid{
+            grid-template-columns:1fr;
+        }
     }
 </style>
 </head>
