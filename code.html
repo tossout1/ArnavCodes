@@ -54,6 +54,21 @@
         color:#cbd5e1;
     }
 
+    .iframe-wrap{
+        margin-top:16px;
+        border:1px solid #1f2937;
+        border-radius:10px;
+        overflow:hidden;
+        background:#0f172a;
+    }
+
+    iframe{
+        width:100%;
+        min-height:700px;
+        border:0;
+        background:white;
+    }
+
     a{
         color:#38bdf8;
         text-decoration:none;
@@ -113,25 +128,14 @@
     </div>
 
     <div class="card">
-        <h2>Or Use VS Code Online</h2>
-        <p>
-            If you can’t install VS Code, you can use the browser version instead.
-        </p>
-
-        <a class="button secondary" href="https://vscode.dev/" target="_blank">
-            Open VS Code in Browser
-        </a>
-    </div>
-
-    <div class="card">
         <h2>Start Coding</h2>
         <p>
-            Open a workspace in the browser version and start building Python or web projects directly.
+            Use the embedded editor below to practice Python, HTML, CSS, or JavaScript directly in your browser.
         </p>
 
-        <a class="button" href="https://www.onlineide.pro/playground/python?utm_source=online-python&utm_medium=navbar&utm_campaign=onlineidepro" target="_blank">
-            Launch Editor
-        </a>
+        <div class="iframe-wrap">
+            <iframe src="https://www.onlineide.pro/playground/python?utm_source=online-python&utm_medium=navbar&utm_campaign=onlineidepro" title="Online coding editor"></iframe>
+        </div>
     </div>
 
 </div>
