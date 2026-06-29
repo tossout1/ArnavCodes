@@ -1,14 +1,14 @@
-# ArnavCodes
+# ArnavCodes Club
 
 **Learn. Create. Launch.**
 
-🌐 **Website:** https://tossout1.github.io/ArnavCodes
+🌐 **Website:** https://tossout1.github.io/ArnavCodes Club
 
-ArnavCodes is a free student-led coding club that teaches students how to program and build technology in a world transformed by AI.
+ArnavCodes Club is a free student-led coding club that teaches students how to program and build technology in a world transformed by AI.
 
 We believe that AI is changing software development, but understanding programming fundamentals is more important than ever. Students learn Python, C, problem-solving, and software engineering while also learning how to work effectively with modern AI tools.
 
-## What Makes ArnavCodes Different?
+## What Makes ArnavCodes Club Different?
 
 * Learn programming fundamentals, not just prompts.
 * Understand how AI can help developers build faster.
@@ -55,12 +55,12 @@ Our goal is to prepare students for the future of computer science, where develo
 * Project-Based Learning
 * Leadership Opportunities
 
-## Join ArnavCodes
+## Join ArnavCodes Club
 
 We are currently recruiting founding members and volunteer mentors.
 
 Visit our website to join:
-**[https://tossout1.github.io/ArnavCodes](https://tossout1.github.io/ArnavCodes)**
+**[https://tossout1.github.io/ArnavCodes Club](https://tossout1.github.io/ArnavCodes Club)**
 
 ## Contact
 

@@ -4,8 +4,8 @@
   <link rel="icon" type="image/x-icon" href="./favicon.ico?v=2">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ArnavCodes | Interactive Coding Quiz Game</title>
-  <meta name="description" content="Play an interactive coding quiz game from ArnavCodes to practice programming concepts and sharpen your skills.">
+  <title>ArnavCodes Club | Interactive Coding Quiz Game</title>
+  <meta name="description" content="Play an interactive coding quiz game from ArnavCodes Club to practice programming concepts and sharpen your skills.">
   <style>body{font-family:Arial,sans-serif;background:#0b1220;color:white;display:flex;justify-content:center;align-items:center;height:100vh;margin:0}.container{width:90%;max-width:750px;background:#111c33;padding:22px;border-radius:14px;text-align:center}.question{white-space:pre-wrap;margin:18px 0;font-size:16px;text-align:left}.options button{width:100%;padding:10px;margin:6px 0;border:none;border-radius:8px;background:#24324f;color:white;cursor:pointer;font-size:15px}.options button:hover{background:#334a70}.feedback{margin-top:10px;font-weight:bold}.topbar{display:flex;justify-content:space-between;margin-bottom:10px;font-size:14px;opacity:.8}.giveup{margin-top:10px;width:100%;padding:10px;border:none;border-radius:8px;background:#ef4444;color:white;font-weight:bold;cursor:pointer}.giveup:hover{background:#dc2626}</style>
 </head>
 <!-- Google tag (gtag.js) -->
@@ -18,7 +18,7 @@
   gtag('config', 'G-8EXMZ3Z7JE');
 </script>
 <body>
-<div class="container" id="app"><h1>ArnavCodes</h1><div class="topbar"><div id="status"></div><div>Max mistakes: 2</div></div><div class="question" id="question"></div><div class="options" id="options"></div><div class="feedback" id="feedback"></div><button class="giveup" onclick="giveUp()">Give Up</button></div>
+<div class="container" id="app"><h1>ArnavCodes Club</h1><div class="topbar"><div id="status"></div><div>Max mistakes: 2</div></div><div class="question" id="question"></div><div class="options" id="options"></div><div class="feedback" id="feedback"></div><button class="giveup" onclick="giveUp()">Give Up</button></div>
 <script>
 
 let mistakes = 0;
@@ -188,7 +188,7 @@ function checkAnswer(selected, correct) {
 function giveUp() {
   document.getElementById("app").innerHTML = `
     <h1>It's okay 👍</h1>
-    <p>You got close to completing ArnavCodes challenge.</p>
+    <p>You got close to completing ArnavCodes Club challenge.</p>
     <p>If you would like to learn how to get better at making software using AI, follow the link below.</p>
     <a href="./#join">Go to signup.</a>
     `;

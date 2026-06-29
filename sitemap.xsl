@@ -4,8 +4,8 @@
   <xsl:template match="/">
     <html>
       <head>
-        <title>ArnavCodes Sitemap</title>
-        <link rel="icon" href="/ArnavCodes/favicon.ico" type="image/x-icon" />
+        <title>ArnavCodes Club Sitemap</title>
+        <link rel="icon" href="/ArnavCodes Club/favicon.ico" type="image/x-icon" />
         <style>
           body { font-family: Arial, sans-serif; background: #f5f7fb; color: #1c1f26; margin: 0; padding: 24px; }
           .container { max-width: 900px; margin: 0 auto; }
@@ -22,7 +22,7 @@
       </head>
       <body>
         <div class="container">
-          <h1>ArnavCodes Sitemap</h1>
+          <h1>ArnavCodes Club Sitemap</h1>
           <p class="note">This XML sitemap is styled for browser viewing and includes all current HTML pages.</p>
           <table>
             <thead>
